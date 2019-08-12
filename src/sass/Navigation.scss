@@ -10,12 +10,13 @@
 		color: white;
 		text-decoration: none;
 		padding: 30px 20px;
+		transition: all .2s;
 
 		span {
 			display: inline-block;
 			position: relative;
-			top: -19px;
-			left: 35px;
+			top: -5px;
+			left: 5px;
 			font-weight: bold;
 			line-height: 18px;
 			text-align: center;
@@ -23,7 +24,9 @@
 			border-radius: 100%;
 			width: 20px;
 			height: 20px;
-			padding: 1%;
+		}
+		&:active {
+			background: rgb(112, 112, 112);
 		}
 	}
 }
