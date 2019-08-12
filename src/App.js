@@ -13,8 +13,8 @@ function App() {
 	const [products] = useState(data);
 	const [cart, setCart] = useState([]);
 
-	const removeItem = () => {
-
+	const removeItem = (targetId) => {
+		setCart(cart.filter((item, index) => index !== targetId));
 	}
 
 	const addItem = item => {
@@ -33,7 +33,7 @@ function App() {
 			</ProductContext.Provider>
 
 			{/* Shopping Cart Route with CartContext values */}
-			<CartContext.Provider value={{ cart, setCart }}>
+			<CartContext.Provider value={{ cart, setCart, removeItem }}>
 				<Route path="/cart" component={ShoppingCart} />
 			</CartContext.Provider>
 
